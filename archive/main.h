@@ -1,3 +1,7 @@
+#ifdef windows.h
+#include <windows.h>
+#endif
+
 #ifndef NOITE
 #define NOITE
 
@@ -6,7 +10,7 @@
 #include <vector>
 #include <fstream>
 #include <stdlib.h>
-#include <windows.h>
+
 
 using namespace std;
 
@@ -51,7 +55,18 @@ using namespace std;
 #define INTENSE_BACKGROUND_CYAN "\033[106m"      /* Cyan */
 #define INTENSE_BACKGROUND_WHITE "\033[107m"      /* White */
 
-void mac_output(string message, string color);
-void windows_output(string message, string color);
 
+string header = 
+"##########################################\n\n"
+"\t ____ ____ ____ ____ ____ \n"
+"\t||N |||O |||I |||T |||E ||\n"
+"\t||__|||__|||__|||__|||__||\n"
+"\t|/__\\|/__\\|/__\\|/__\\|/__\\|\n\n\n"
+"##########################################\n\n\n";
+
+
+void mac_output(string message, string color, bool newline);
+void windows_output(string message, string color, bool newline);
+void display_header();
+string get_input();
 #endif

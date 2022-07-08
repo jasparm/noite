@@ -4,7 +4,7 @@
 // Driver Code
 int main()
 {
-    mac_output("Hello World!\n", BOLDCYAN);  
+    mac_output("Hello World!", BOLD CYAN);  
     return 0;
 }
 

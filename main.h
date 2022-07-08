@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <stdlib.h>
+#include <windows.h>
 
 using namespace std;
 
@@ -50,6 +52,6 @@ using namespace std;
 #define INTENSE_BACKGROUND_WHITE "\033[107m"      /* White */
 
 void mac_output(string message, string color);
-
+void windows_output(string message, string color);
 
 #endif
